@@ -17,4 +17,18 @@ export function aufgabe02(args) {
   const input = args
   const result = input.toUpperCase()
   return result
+  return args.toUpperCase()
+}
+
+export function aufgabe03(args) {
+  const input = args
+  const result = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e" || currentElement === "E") {
+      result++
+    }
+  }
+    return result
 }
