@@ -31,16 +31,32 @@ export function aufgabe03(text) {
   return count;
 }
 
-export function aufgabe04(args) {
-  if (typeof args !== 'string') {
-      throw new Error('Ungültiger Eingabetyp. Bitte einen Text als Argument übergeben.');
+export function aufgabe04(args){
+  const cleanText = args.replace(/[^\w\s]/gi,'')
+  const words = cleanText.split(/\s+/);
+
+  return words.length;
+
+}
+
+export function aufgabe05(args){
+  const input = args
+  if (input.toLowerCase() === input) {
+    return false
+  } else {
+    return true
   }
+}
 
-  const aufgabe04 = args.match(/\S+/g);
-
-  if (!aufgabe04) {
-      return 0;
+export function aufgabe06(args) {
+  const input = args
+  if (input.toLowerCase()=== input) {
+    return false
+  } else {
+    return true
   }
+}
 
-  return aufgabe04.length;
+export function aufgabe07(args) {
+  
 }
